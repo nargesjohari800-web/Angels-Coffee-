@@ -1,0 +1,468 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fcf2e7;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/*MENU BUTTON*/
+/* .menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+} */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* @media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+} */
+
+html, body {
+    overflow-x: hidden;
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+
+    background: #fff;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    z-index: 9999;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+}
+
+   
+/* =========================
+   SIDE MENU
+========================= */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100vh;
+    background: #f1dec9;
+    box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding-top: 80px;
+}
+
+.side-menu.active {
+    right: 0;
+}
+
+.side-menu ul {
+    list-style: none;
+}
+
+.side-menu li {
+    margin: 18px 0;
+    text-align: center;
+}
+
+
+.side-menu li:hover {
+  background-color: #fcf2e7;
+  border-radius: 20px;
+  padding: 6px;
+  transition: 0.2s;
+}
+.side-menu a:hover {
+  color: #ff6b6b;
+}
+
+.side-menu a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+
+.menu-images {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu-images img {
+    width: 90px;
+    height: auto;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    width: 100%;
+    height: 440px;
+    background: url("./hed img.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   CARD (BASE STYLE ONLY)
+========================= */
+.card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================
+   MAIN CARDS (MENU)
+========================= */
+.cards-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.cards-container .card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.cards-container .card img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    border-radius: 14px;
+}
+
+.cards-container .card h3 {
+    margin-top: 12px;
+    font-size: 1.1rem;
+}
+
+.cards-container .card p {
+    font-size: 0.9rem;
+    margin: 6px 10px 14px;
+    color: #555;
+}
+
+/* =========================
+   SELLER IMAGE
+========================= */
+.seller img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section h2 {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #ff6b6b;
+    padding-bottom: 0.5rem;
+}
+
+/* =========================
+   GALLERY / SLIDER
+========================= */
+.trending {
+    margin-bottom: 200px;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider .card {
+    min-width: 260px;
+    height: 260px;
+    flex-shrink: 0;
+}
+
+.slider .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================
+   NAV BUTTONS
+========================= */
+.nav {
+    background: #fff;
+    border: none;
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.nav:hover {
+    background: #f4a261;
+    color: #fff;
+}
+/* 
+.location-wrapper {
+    width: 580px;
+    height: 480px;
+    margin: 2rem auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#location {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+
+    -webkit-mask-image: radial-gradient(
+        circle,
+        black 40%,
+        transparent 100%
+    );
+    mask-image: radial-gradient(
+        circle,
+        black 20%,
+        transparent 100%
+    );
+} */
+/* ===== Location Wrapper ===== */
+.location-wrapper {
+    width: 580px;
+    height: 480px;
+
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#location {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-mask-image: radial-gradient(
+        circle,
+        rgba(0,0,0,1) 35%,
+        rgba(0,0,0,0) 100%
+    );
+    mask-image: radial-gradient(
+        circle,
+        rgba(0,0,0,1) 25%,
+        rgba(0,0,0,0) 100%
+    );
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+#location:hover {
+    transform: scale(1.08);
+    opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+    .location-wrapper {
+        width: 460px;
+        height: 360px;
+        margin: 1.5rem auto;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    height: 660px;
+    background: url("./imeg footer  (1).png") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 2rem;
+    color: #985636;
+}
+
+/* =========================
+   ✅ RESPONSIVE
+========================= */
+
+/* 📱 Tablet & Mobile */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        padding: 0 16px;
+    }
+
+    .cards-container .card img {
+        aspect-ratio: 1 / 1;
+        height: auto;
+    }
+}
+
+/* 📱 Small Mobile */
+@media (max-width: 420px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*  insta */
+.image-container {
+    position: relative;
+    width: 70px;
+    height: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    /* margin: 1rem auto; */
+}
+
+.image1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+.image2 {
+    position: absolute;
+    bottom: -44px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    z-index: 1;
+    transition: bottom 0.10s ease;
+}
+
+.image-container:hover .image2 {
+    bottom: 16px;
+}
+
+.image-container:hover img:first-child {
+    opacity: 900;
+}
+#location:hover {
+  cursor: pointer;
+}
+/*  */
+.phone-item {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.phone-item.show {
+    max-height: 50px;
+    opacity: 1;
+}
+
+
+

@@ -1,0 +1,530 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #fdf2ec;
+    direction: rtl;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-items: center;
+}
+
+.menu-page {
+    max-width: 70%;
+    margin: 40px auto;
+}
+/* h 2*/
+.menu-title-main {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    display: block;
+}
+
+ /* menu button */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+/* .menu-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffffea;
+    color: #a87404;
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+} */
+/* side menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100vh;
+    background: #f1dec9;
+    box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding-top: 80px;
+}
+ .side-menu li:hover {
+  background-color: #fcf2e7;
+  border-radius: 20px;
+  padding: 6px;
+  transition: 0.2s;
+}
+/* open state */
+.side-menu.active {
+    right: 0;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.side-menu a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.side-menu a:hover {
+    color: #ff6b6b;
+}
+/* images at bottom of menu */
+.menu-images {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu-images img {
+    width: 100px;
+    height: 150px;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+}
+
+.menu-images img:hover {
+    transform: scale(1.1);
+}
+/*  */
+.phone-item {
+    display: none;
+    font-size: 13px;
+}
+
+.phone-item.show {
+    display: block;
+}
+
+.phone-item.developer {
+    opacity: 0.75;
+}
+
+/* نوار منو */
+.menu-nav {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 12px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* آیتم منو */
+.menu-nav .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    text-decoration: none;
+    background: #f5f5f5;
+    padding: 10px 12px;
+    border-radius: 14px;
+    color: #444;
+    min-width: 80px;
+    font-size: 12px;
+}
+
+/* عکس */
+.menu-nav .nav-item img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.item-image :hover{
+    cursor: zoom-in;
+}
+/* متن زیر عکس */
+.menu-nav .nav-item span {
+    white-space: nowrap;
+}
+
+/* hover */
+.menu-nav .nav-item:hover {
+    background: #ff9f43;
+    color: #fff;
+}
+/*  */
+.builder-logo {
+    width: 30px;        /* اندازه لوگو */
+    height: auto;
+    display: block;
+}
+
+.builder-logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .menu-nav {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-nav a {
+    text-decoration: none;
+    background: #f5f5f5;
+    padding: 8px 14px;
+    border-radius: 12px;
+    color: #444;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.menu-nav a:hover {
+    background: #ff9f43;
+    color: #fff;
+} */
+
+/*  عکس  منو */
+.center-image {
+    display: block;
+    margin: 30px auto;
+    width: 500px;
+    max-width: 90%;
+    height: auto;
+}
+
+/* کارت منو */
+.menu-card {
+    background: #fff8f0;
+    margin-top: 50px;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* عنوان منو */
+.menu-title {
+    margin: 0 0 12px;
+    padding: 10px;
+    border-radius: 14px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.menu-title.hot {
+    background: #ff8c42;
+    color: #fff;
+}
+
+.menu-title.cold {
+    background: #9db2bf;
+    color: #fff;
+}
+
+.menu-title.warm {
+    background: #f6803b;
+    color: #fff;
+}
+
+/* لیست */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffffa1;
+  border-radius: 15px;
+}
+
+.menu-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 6px;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+/* آیتم + عکس */
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.item-info img {
+    width: 156px;
+    height: 104px;
+    object-fit: contain;
+}
+
+/* قیمت */
+.price {
+    background: #ffe0c3;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.price.highlight {
+    background: #ff8c42;
+    color: #fff;
+}
+/*  */
+.item-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.item-desc {
+    font-size: 11px;
+    color: #777;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.item-name {
+    font-size: 14px;
+}
+/*  */
+.phone-item {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.phone-item.show {
+    max-height: 50px;
+    opacity: 1;
+}
+/* footer */
+.site-footer {
+    text-align: center;
+    background-image: url("./imeg footer  (1).png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    min-height: 60vh;   /* ✅ به‌جای height ثابت */
+    padding: 2rem 1rem;
+
+    width: 100%;
+    color: #985636;
+}
+
+.footer-logo {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.site-footer p {
+    font-size: 14px;
+}
+
+
+/*  */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .menu-page {
+        max-width: 95%;
+        margin: 20px auto;
+    }
+
+    .menu-title-main {
+        font-size: 32px;
+        letter-spacing: 1px;
+    }
+
+    .menu-nav {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .menu-nav .nav-item {
+        min-width: 65px;
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    .menu-nav .nav-item img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .center-image {
+        width: 280px;
+        margin: 20px auto;
+    }
+
+    .menu-card {
+        margin-top: 30px;
+        padding: 12px;
+    }
+
+    .menu-title {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .menu-list li {
+        padding: 8px 4px;
+    }
+
+    .item-name {
+        font-size: 13px;
+    }
+
+    .item-desc {
+        font-size: 10px;
+    }
+
+    .price {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+    .menu-toggle {
+        width: 44px;
+        height: 44px;
+        font-size: 24px;
+        top: 15px;
+        right: 15px;
+    }
+
+    .side-menu {
+        width: 230px;
+    }
+
+    .menu-images img {
+        width: 70px;
+        height: auto;
+    }
+}
+/*  */
+@media (max-width: 480px) {
+
+    .menu-title-main {
+        font-size: 26px;
+    }
+
+    .menu-nav {
+        border-radius: 12px;
+    }
+
+    .menu-nav .nav-item {
+        min-width: 60px;
+        font-size: 10px;
+    }
+
+    .item-info img {
+        width: 94px;
+        height: 57px;
+    }
+
+    .price {
+        font-size: 11px;
+    }
+}
+.menu-nav,
+.menu-list {
+    direction: ltr;
+}
+/*  */
+@media (min-width: 1200px) {
+
+    .menu-page {
+        max-width: 1200px;
+    }
+
+    .menu-title-main {
+        font-size: 52px;
+    }
+
+    .menu-nav .nav-item {
+        min-width: 90px;
+        font-size: 14px;
+    }
+
+    .center-image {
+        width: 420px;
+    }
+
+    .menu-list li {
+        padding: 12px 0;
+    }
+}
+@media (max-width: 768px) {
+    .site-footer {
+        min-height: 45vh;
+        padding-bottom: 1.5rem;
+    }
+
+    .footer-logo {
+        width: 50px;
+    }
+
+    .site-footer p {
+        font-size: 12px;
+    }
+}
+
